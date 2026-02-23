@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#fortune-box {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #ffd966;
+    border: 2px solid green;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+#fortune-text {
+    margin: 0;
+    color: red;
+    font-size: 16px;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.color-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button[data-color="green"] {
+    background-color: green;
+}
+
+button[data-color="yellow"] {
+    background-color: gold;
+}
+
+button[data-color="blue"] {
+    background-color: steelblue;
+}
+
+button[data-color="orange"] {
+    background-color: orange;
+}
+
+#new-fortune-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#new-fortune-btn:hover {
+    background-color: #555;
+}
+/* ── Reset & tokens ─────────────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:     #0d0d0d;
+  --fg:     #f0ece4;
+  --accent: #c8f04d;
+  --muted:  #555;
+  --font:   'DM Mono', 'Courier New', monospace;
+  --h:      68px;
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid #222;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: var(--h);
+}
+
+/* ── Logo ────────────────────────────────────────────────── */
+.logo {
+  font-family: var(--font);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--fg);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+/* ── Nav links ───────────────────────────────────────────── */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+.nav-links a {
+  font-family: var(--font);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.4rem 0.75rem;
+  border-radius: 2px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--fg);
+  background: #1a1a1a;
+}
+
+.nav-links a.active {
+  color: var(--accent);
+  background: transparent;
+}
+
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
